@@ -1,0 +1,54 @@
+:root {
+    --pale-sage: #BFF4CB;
+    --sage: #84A98C;
+    --dusty-emerald: #52796f;
+    --deep-emerald: #354F52;
+    --night-forest: #2F3E46;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    text-align: center;    
+    background-color: var(--night-forest);
+    color: var(--pale-sage)
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.desktop-container {
+    display: flex;
+    flex-direction: column;
+}
+
+main, aside, nav, footer, header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    min-height: 60vh;
+    flex-grow: 5;
+}
+
+aside, nav {
+    background-color: var(--dusty-emerald);
+    flex-grow: 2;
+}
+
+footer, header {
+    background-color: var(--sage);
+    flex-grow: 1;
+}
+
+@media (min-width: 600px) {
+    .desktop-container {
+        flex-direction: row;       
+    }
+}
